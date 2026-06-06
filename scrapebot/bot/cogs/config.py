@@ -236,6 +236,7 @@ class ConfigCog(commands.Cog, name="Configuration"):
                 "`/status` — Show current bot status\n"
                 "`/check` — Force immediate stock check\n"
                 "`/checkout` — Manually trigger checkout\n"
+                "`/buynow` — Instantly checkout any URL\n"
                 "`/autocheckout` — Toggle auto-checkout\n"
                 "`/pause` — Pause monitoring\n"
                 "`/resume` — Resume monitoring"

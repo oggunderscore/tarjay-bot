@@ -6,7 +6,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
-from scrapebot.models import StockStatus
+from scrapebot.models import CheckoutResult, StockStatus
 
 
 class MonitoringCog(commands.Cog, name="Monitoring"):
@@ -157,6 +157,79 @@ class MonitoringCog(commands.Cog, name="Monitoring"):
         # Trigger checkout in background
         import asyncio
         asyncio.create_task(self.bot.monitor._trigger_checkout(state))
+
+    @app_commands.command(name="buynow", description="Instantly checkout a product by URL")
+    @app_commands.describe(
+        url="Target.com product URL to buy now",
+        max_price="Maximum price to pay (default: 999.99)",
+        quantity="Quantity to purchase (default: 1)",
+    )
+    async def buynow(
+        self,
+        interaction: discord.Interaction,
+        url: str,
+        max_price: float = 999.99,
+        quantity: int = 1,
+    ) -> None:
+        """Immediately attempt checkout on a Target product URL."""
+        if not self.bot.monitor:
+            await interaction.response.send_message(
+                "❌ Monitor is not initialized.", ephemeral=True
+            )
+            return
+
+        if not self.bot.settings.target_email or not self.bot.settings.target_password:
+            await interaction.response.send_message(
+                "❌ No Target credentials configured. Use `/setcredentials` first.",
+                ephemeral=True,
+            )
+            return
+
+        from scrapebot.config import ProductTarget, extract_tcin
+
+        try:
+            tcin = extract_tcin(url)
+        except ValueError as exc:
+            await interaction.response.send_message(
+                f"❌ Invalid URL: {exc}", ephemeral=True
+            )
+            return
+
+        quantity = max(1, min(10, quantity))
+        product = ProductTarget(
+            name=f"Quick Buy ({tcin})",
+            url=url,
+            max_quantity=quantity,
+            max_price=max_price,
+        )
+
+        await interaction.response.send_message(
+            f"🛒 Starting checkout for **{url}**\n"
+            f"Max price: ${max_price:.2f} | Qty: {quantity}"
+        )
+
+        # Run checkout in background
+        import asyncio
+
+        async def _run_buynow():
+            try:
+                outcome = await self.bot.monitor.checkout.run_checkout(product)
+                if outcome.result == CheckoutResult.SUCCESS:
+                    pass  # Notifier already sent success message
+                elif outcome.result == CheckoutResult.OUT_OF_STOCK:
+                    self.bot.monitor.notifier.checkout_error(
+                        f"Out of Stock: {outcome.message}", url
+                    )
+                elif outcome.result == CheckoutResult.PRICE_TOO_HIGH:
+                    pass  # Already notified
+                else:
+                    self.bot.monitor.notifier.checkout_error(
+                        f"Failed: {outcome.message}", url
+                    )
+            except Exception as exc:
+                self.bot.monitor.notifier.checkout_error(f"Crash: {exc}", url)
+
+        asyncio.create_task(_run_buynow())
 
     @app_commands.command(name="check", description="Force an immediate stock check on a product")
     @app_commands.describe(name_or_tcin="Product name or TCIN to check now")
