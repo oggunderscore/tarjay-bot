@@ -1,0 +1,35 @@
+monitor:
+  poll_interval_seconds: 8
+  jitter_seconds: 2
+  stock_types:
+    - shipping
+  notify_on_every_poll: false
+
+location:
+  zip: "10001"
+  state: "NY"
+  latitude: 40.7128
+  longitude: -74.0060
+  store_id: "1859"
+
+redsky:
+  api_key: "9f36aeafbe60771e321a7cc95a78140772ab3e96"
+  base_url: "https://redsky.target.com/redsky_aggregations/v1/web"
+
+browser:
+  headless: false
+  slow_mo_ms: 50
+  user_data_dir: "./browser_data/target_session"
+  timeout_ms: 30000
+  # Optional NSTBrowser CDP URL overrides local Chromium when set in .env
+  screenshot_on_error: true
+  screenshot_dir: "./screenshots"
+
+checkout:
+  enabled: true
+  place_order_retry_seconds: 2
+  place_order_max_attempts: 300
+  stuck_alert_seconds: 90
+  prefer_saved_address: true
+  prefer_saved_payment: true
+  fulfillment: shipping

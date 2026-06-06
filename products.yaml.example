@@ -1,0 +1,6 @@
+products:
+  - name: "Example Product"
+    url: "https://www.target.com/p/example/-/A-14758453"
+    max_quantity: 2
+    max_price: 15.00
+    enabled: true

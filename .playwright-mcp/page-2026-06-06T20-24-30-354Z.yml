@@ -1,0 +1,695 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic:
+      - link "skip to main content" [ref=e3] [cursor=pointer]:
+        - /url: "#content"
+      - link "skip to footer" [ref=e4] [cursor=pointer]:
+        - /url: "#footerHeader"
+    - generic [ref=e5]:
+      - generic [ref=e8]:
+        - 'button "Ship to location: 91709" [ref=e10] [cursor=pointer]':
+          - generic [ref=e11]:
+            - img [ref=e13]
+            - generic [ref=e15]: Ship to 91709
+        - 'button "Store: Tustin" [ref=e17] [cursor=pointer]':
+          - generic [ref=e18]:
+            - img [ref=e20]
+            - generic [ref=e23]: Tustin
+      - navigation "Primary" [ref=e25]:
+        - generic [ref=e27]:
+          - link "Target home" [ref=e28] [cursor=pointer]:
+            - /url: /
+            - img
+          - link "Main menu" [ref=e30] [cursor=pointer]:
+            - /url: /c/shop-all-categories/-/N-5xsxf?prehydrateClick=true
+            - img
+          - generic [ref=e32]:
+            - searchbox "What can we help you find? suggestions appear below" [ref=e33]
+            - button "search by voice" [ref=e35] [cursor=pointer]
+            - button "search" [ref=e36] [cursor=pointer]
+          - link "Account, sign in" [ref=e37] [cursor=pointer]:
+            - /url: /account?prehydrateClick=true
+            - img [ref=e39]
+            - generic [ref=e41]: Hi, Kevin
+            - img
+          - link "cart 0 items" [ref=e42] [cursor=pointer]:
+            - /url: /cart?prehydrateClick=true
+            - img [ref=e44]
+      - main [ref=e46]:
+        - generic [ref=e47]:
+          - heading "Homepage" [level=1] [ref=e50]
+          - generic [ref=e51]:
+            - generic [ref=e55]:
+              - 'link "Epic Style <span style=\"color: #ffffff;\">Americana-inspired looks for everyone—<b>from $5</b></span> Shop summer style" [ref=e56] [cursor=pointer]':
+                - /url: /c/fourth-of-july-outfits/-/N-4st20
+                - img "Epic Style" [ref=e60]
+                - generic [ref=e62]:
+                  - 'generic "<span style=\"color: #ffffff;\">Americana-inspired looks for everyone—<b>from $5</b></span>" [ref=e64]':
+                    - generic [ref=e65]: Americana-inspired looks for everyone—from $5
+                  - link "Shop summer style" [ref=e67]:
+                    - generic [ref=e68]: Shop summer style
+              - button "pause":
+                - generic:
+                  - generic: pause
+                  - img
+            - generic [ref=e73]:
+              - link "Women’s" [ref=e76] [cursor=pointer]:
+                - /url: /c/fourth-of-july-outfits/-/N-4st20Zvdy4oZlucm565tn8bZsktl5ZypvdgZtduv6Zx8yblZznkhqZqvfr5Zx6uanZ5koxZigcac?type=products
+                - heading "Women’s" [level=2] [ref=e85]
+              - link "Kids’" [ref=e88] [cursor=pointer]:
+                - /url: /c/fourth-of-july-outfits/kids/-/N-4st20Z642yn
+                - heading "Kids’" [level=2] [ref=e97]
+              - link "Men’s" [ref=e100] [cursor=pointer]:
+                - /url: /c/fourth-of-july-outfits/men/-/N-4st20Zq7xor?type=products
+                - heading "Men’s" [level=2] [ref=e109]
+              - link "Baby" [ref=e112] [cursor=pointer]:
+                - /url: /c/fourth-of-july-outfits/-/N-4st20Zawp9wZ7tqnk?type=products
+                - heading "Baby" [level=2] [ref=e121]
+            - region "Carousel" [ref=e129]:
+              - generic [ref=e130]:
+                - heading "Levi’s for every summer moment" [level=2]
+                - link "Shop all" [ref=e131] [cursor=pointer]:
+                  - /url: /b/levi-s/-/N-54zpr?sortBy=newest
+              - region "Carousel" [ref=e134]:
+                - list [ref=e135]:
+                  - listitem [ref=e136]:
+                    - generic [ref=e137]:
+                      - img [ref=e138]
+                      - generic [ref=e139]:
+                        - paragraph [ref=e140]: Levi’s for every summer moment
+                        - link "Shop all" [ref=e141] [cursor=pointer]:
+                          - /url: /b/levi-s/-/N-54zpr?sortBy=newest
+                  - listitem [ref=e142]:
+                    - generic [ref=e145]:
+                      - generic [ref=e146]:
+                        - link "Levi's® Men's 454™ Relaxed Fit 10\" Shorts" [ref=e147] [cursor=pointer]:
+                          - /url: /p/levi-s-men-s-454-relaxed-fit-10-shorts/-/A-95008995
+                          - img "Levi's® Men's 454™ Relaxed Fit 10\" Shorts" [ref=e148]
+                        - link "$44.99 Levi's® Men's 454™ Relaxed Fit 10\" Shorts" [ref=e150] [cursor=pointer]:
+                          - /url: /p/levi-s-men-s-454-relaxed-fit-10-shorts/-/A-95008995
+                          - generic [ref=e152]: $44.99
+                          - generic [ref=e153]: Levi's® Men's 454™ Relaxed Fit 10" Shorts
+                      - button "Add to cart - Levi's® Men's 454™ Relaxed Fit 10\" Shorts" [ref=e156] [cursor=pointer]: Add to cart
+                  - listitem [ref=e157]:
+                    - generic [ref=e160]:
+                      - generic [ref=e161]:
+                        - link "Levi's® Girls' Mid-Rise Frayed Cutoff Jean Shorts - Light Blue Denim" [ref=e162] [cursor=pointer]:
+                          - /url: /p/levi-s-girls-mid-rise-frayed-cutoff-jean-shorts-light-blue-denim/-/A-95044621
+                          - img "Levi's® Girls' Mid-Rise Frayed Cutoff Jean Shorts - Light Blue Denim" [ref=e163]
+                        - link "$25.00 Levi's® Girls' Mid-Rise Frayed Cutoff Jean Shorts - Light Blue Denim" [ref=e165] [cursor=pointer]:
+                          - /url: /p/levi-s-girls-mid-rise-frayed-cutoff-jean-shorts-light-blue-denim/-/A-95044621
+                          - generic [ref=e167]: $25.00
+                          - generic [ref=e168]: Levi's® Girls' Mid-Rise Frayed Cutoff Jean Shorts - Light Blue Denim
+                      - button "Add to cart - Levi's® Girls' Mid-Rise Frayed Cutoff Jean Shorts - Light Blue Denim" [ref=e171] [cursor=pointer]: Add to cart
+                  - listitem [ref=e172]:
+                    - generic [ref=e175]:
+                      - generic [ref=e176]:
+                        - link "Levi's® Boys' Jean Shorts" [ref=e177] [cursor=pointer]:
+                          - /url: /p/levi-s-boys-jean-shorts/-/A-95044622
+                          - img "Levi's® Boys' Jean Shorts" [ref=e178]
+                        - link "$25.00 Levi's® Boys' Jean Shorts" [ref=e180] [cursor=pointer]:
+                          - /url: /p/levi-s-boys-jean-shorts/-/A-95044622
+                          - generic [ref=e182]: $25.00
+                          - generic [ref=e183]: Levi's® Boys' Jean Shorts
+                      - button "Add to cart - Levi's® Boys' Jean Shorts" [ref=e186] [cursor=pointer]: Add to cart
+                - button "Next Page" [ref=e187] [cursor=pointer]:
+                  - img
+            - generic [ref=e194]:
+              - generic [ref=e195]: New
+              - link "The collection has evolved! Available now for a limited time.":
+                - /url: /c/pokemon-x-target/-/N-x3oll
+                - generic [ref=e197] [cursor=pointer]:
+                  - heading "The collection has evolved!" [level=2] [ref=e198]:
+                    - generic [ref=e199]: The collection has evolved!
+                  - paragraph [ref=e200]:
+                    - generic [ref=e201]: Available now for a limited time.
+              - img "Pokémon x Target, ©2026 Pokémon / Nintendo / Creatures / GAME FREAK." [ref=e202]
+            - generic [ref=e209]:
+              - iframe
+            - heading "Stock up on all your summer needs" [level=2] [ref=e219]
+            - generic [ref=e224]:
+              - link "30% off women’s activewear*" [ref=e227] [cursor=pointer]:
+                - /url: /pl/436973097
+                - generic [ref=e228]:
+                  - heading "30% off" [level=3] [ref=e230]:
+                    - generic [ref=e231]:
+                      - generic [ref=e233]: 30
+                      - generic [ref=e234]: 30% off
+                  - paragraph [ref=e235]:
+                    - generic [ref=e237]: women’s activewear*
+              - link "30% off women’s shoes, handbags & wallets*" [ref=e240] [cursor=pointer]:
+                - /url: /c/30-off-women-s-shoes-handbags-wallets/-/N-d7ymsZoxtuzZ5tdv0
+                - generic [ref=e241]:
+                  - heading "30% off" [level=3] [ref=e243]:
+                    - generic [ref=e244]:
+                      - generic [ref=e246]: 30
+                      - generic [ref=e247]: 30% off
+                  - paragraph [ref=e248]:
+                    - generic [ref=e250]: women’s shoes, handbags & wallets*
+              - link "40% off women’s dresses & skirts*" [ref=e253] [cursor=pointer]:
+                - /url: /pl/462526644
+                - generic [ref=e254]:
+                  - heading "40% off" [level=3] [ref=e256]:
+                    - generic [ref=e257]:
+                      - generic [ref=e259]: 40
+                      - generic [ref=e260]: 40% off
+                  - paragraph [ref=e261]:
+                    - generic [ref=e263]: women’s dresses & skirts*
+              - link "BOGO 50% off select summertime treats & beverages* + more grocery deals" [ref=e266] [cursor=pointer]:
+                - /url: /c/grocery-deals/-/N-k4uyq
+                - generic [ref=e267]:
+                  - heading "BOGO 50% off" [level=3] [ref=e269]:
+                    - generic [ref=e270]:
+                      - generic [ref=e271]:
+                        - generic [ref=e272]: BOGO
+                        - generic [ref=e273]: 50
+                      - generic [ref=e274]: BOGO 50% off
+                  - paragraph [ref=e275]:
+                    - generic [ref=e276]: select summertime treats & beverages* + more grocery deals
+              - link "BOGO 50% off Sun Squad™ pools, slides & sprinklers* + more deals" [ref=e279] [cursor=pointer]:
+                - /url: /c/sports-outdoors-deals/-/N-54uxx
+                - generic [ref=e280]:
+                  - heading "BOGO 50% off" [level=3] [ref=e282]:
+                    - generic [ref=e283]:
+                      - generic [ref=e284]:
+                        - generic [ref=e285]: BOGO
+                        - generic [ref=e286]: 50
+                      - generic [ref=e287]: BOGO 50% off
+                  - paragraph [ref=e288]:
+                    - generic [ref=e290]: Sun Squad™ pools, slides & sprinklers* + more deals
+              - link "BOGO 25% off sunscreen* + more summer beauty deals" [ref=e293] [cursor=pointer]:
+                - /url: /c/beauty-personal-care-deals/-/N-5514v
+                - generic [ref=e294]:
+                  - heading "BOGO 25% off" [level=3] [ref=e296]:
+                    - generic [ref=e297]:
+                      - generic [ref=e298]:
+                        - generic [ref=e299]: BOGO
+                        - generic [ref=e300]: 25
+                      - generic [ref=e301]: BOGO 25% off
+                  - paragraph [ref=e302]:
+                    - generic [ref=e304]: sunscreen* + more summer beauty deals
+            - generic [ref=e307]:
+              - heading "More deals for your summer routine" [level=2] [ref=e309]
+              - generic [ref=e311]:
+                - tablist [ref=e314]:
+                  - tab "Clothing, Shoes & Accessories" [selected] [ref=e315] [cursor=pointer]
+                  - tab "Grocery" [ref=e316] [cursor=pointer]
+                  - tab "Health & Personal Care" [ref=e317] [cursor=pointer]
+                  - tab "Home & Decor" [ref=e318] [cursor=pointer]
+                  - tab "Toys & Tech" [ref=e319] [cursor=pointer]
+                  - tab "Deals for You" [ref=e320] [cursor=pointer]
+                - tabpanel "Clothing, Shoes & Accessories" [ref=e321]:
+                  - region "Carousel" [ref=e328]:
+                    - region "Carousel" [ref=e331]:
+                      - list [ref=e332]:
+                        - listitem [ref=e333]:
+                          - generic [ref=e336]:
+                            - generic [ref=e337]:
+                              - link "Women's Linen Midi Wrap Skirt - A New Day™":
+                                - /url: /p/women-s-linen-midi-wrap-skirt-a-new-day/-/A-95044668
+                                - img "Women's Linen Midi Wrap Skirt - A New Day™"
+                              - button "Highly rated in Skirts" [ref=e339] [cursor=pointer]:
+                                - generic [ref=e340]:
+                                  - img [ref=e341]
+                                  - text: Highly rated
+                              - link "$18.00 reg $30.00 Sale Women's Linen Midi Wrap Skirt - A New Day™" [ref=e344] [cursor=pointer]:
+                                - /url: /p/women-s-linen-midi-wrap-skirt-a-new-day/-/A-95044668
+                                - generic [ref=e345]:
+                                  - generic [ref=e346]: $18.00
+                                  - generic [ref=e347]: reg $30.00 Sale
+                                - generic [ref=e348]: Women's Linen Midi Wrap Skirt - A New Day™
+                            - button "Add to cart - Women's Linen Midi Wrap Skirt - A New Day™" [ref=e351] [cursor=pointer]: Add to cart
+                        - listitem [ref=e352]:
+                          - generic [ref=e355]:
+                            - generic [ref=e356]:
+                              - link "Women's Maxi Pullover Sundress - Universal Thread™ Navy Blue Floral":
+                                - /url: /p/women-s-maxi-pullover-sundress-universal-thread-navy-blue-floral/-/A-95059056
+                                - img "Women's Maxi Pullover Sundress - Universal Thread™ Navy Blue Floral"
+                              - button "Highly rated in Dresses" [ref=e358] [cursor=pointer]:
+                                - generic [ref=e359]:
+                                  - img [ref=e360]
+                                  - text: Highly rated
+                              - link "$18.00 reg $30.00 Sale Women's Maxi Pullover Sundress - Universal Thread™ Navy Blue Floral" [ref=e363] [cursor=pointer]:
+                                - /url: /p/women-s-maxi-pullover-sundress-universal-thread-navy-blue-floral/-/A-95059056
+                                - generic [ref=e364]:
+                                  - generic [ref=e365]: $18.00
+                                  - generic [ref=e366]: reg $30.00 Sale
+                                - generic [ref=e367]: Women's Maxi Pullover Sundress - Universal Thread™ Navy Blue Floral
+                            - button "Add to cart - Women's Maxi Pullover Sundress - Universal Thread™ Navy Blue Floral" [ref=e370] [cursor=pointer]: Add to cart
+                        - listitem [ref=e371]:
+                          - generic [ref=e374]:
+                            - generic [ref=e375]:
+                              - link "Women's Maxi Sundress - Universal Thread™ Multicolor Gingham":
+                                - /url: /p/women-s-maxi-sundress-universal-thread-multicolor-gingham/-/A-95085770
+                                - img "Women's Maxi Sundress - Universal Thread™ Multicolor Gingham"
+                              - button "Highly rated in Dresses" [ref=e377] [cursor=pointer]:
+                                - generic [ref=e378]:
+                                  - img [ref=e379]
+                                  - text: Highly rated
+                              - link "$18.00 reg $30.00 Sale Women's Maxi Sundress - Universal Thread™ Multicolor Gingham" [ref=e382] [cursor=pointer]:
+                                - /url: /p/women-s-maxi-sundress-universal-thread-multicolor-gingham/-/A-95085770
+                                - generic [ref=e383]:
+                                  - generic [ref=e384]: $18.00
+                                  - generic [ref=e385]: reg $30.00 Sale
+                                - generic [ref=e386]: Women's Maxi Sundress - Universal Thread™ Multicolor Gingham
+                            - button "Add to cart - Women's Maxi Sundress - Universal Thread™ Multicolor Gingham" [ref=e389] [cursor=pointer]: Add to cart
+                        - listitem [ref=e390]:
+                          - generic [ref=e393]:
+                            - generic [ref=e394]:
+                              - link "Women's Maxi Full Skirt - Universal Thread™":
+                                - /url: /p/women-s-maxi-full-skirt-universal-thread/-/A-95059457
+                                - img "Women's Maxi Full Skirt - Universal Thread™"
+                              - link "$18.00 reg $30.00 Sale Women's Maxi Full Skirt - Universal Thread™" [ref=e396] [cursor=pointer]:
+                                - /url: /p/women-s-maxi-full-skirt-universal-thread/-/A-95059457
+                                - generic [ref=e397]:
+                                  - generic [ref=e398]: $18.00
+                                  - generic [ref=e399]: reg $30.00 Sale
+                                - generic [ref=e400]: Women's Maxi Full Skirt - Universal Thread™
+                            - button "Add to cart - Women's Maxi Full Skirt - Universal Thread™" [ref=e403] [cursor=pointer]: Add to cart
+                        - listitem [ref=e404]:
+                          - generic [ref=e407]:
+                            - generic [ref=e408]:
+                              - link "Women's Knit Mini Bodycon Dress - Universal Thread™":
+                                - /url: /p/women-s-knit-mini-bodycon-dress-universal-thread/-/A-95028421
+                                - img "Women's Knit Mini Bodycon Dress - Universal Thread™"
+                              - link "$12.00 reg $20.00 Sale Women's Knit Mini Bodycon Dress - Universal Thread™" [ref=e410] [cursor=pointer]:
+                                - /url: /p/women-s-knit-mini-bodycon-dress-universal-thread/-/A-95028421
+                                - generic [ref=e411]:
+                                  - generic [ref=e412]: $12.00
+                                  - generic [ref=e413]: reg $20.00 Sale
+                                - generic [ref=e414]: Women's Knit Mini Bodycon Dress - Universal Thread™
+                            - button "Add to cart - Women's Knit Mini Bodycon Dress - Universal Thread™" [ref=e417] [cursor=pointer]: Add to cart
+                      - button "Next Page" [ref=e418] [cursor=pointer]:
+                        - img
+            - generic [ref=e425]:
+              - iframe
+            - link "New & trending Explore the latest" [ref=e430] [cursor=pointer]:
+              - /url: /c/what-s-new/-/N-o9rnh
+              - generic [ref=e431]:
+                - generic:
+                  - generic:
+                    - img "New & trending"
+              - link "Explore the latest" [ref=e434]:
+                - generic [ref=e435]: Explore the latest
+            - generic [ref=e442]:
+              - generic [ref=e443]: New
+              - link "Meet Solid & Striped Classic summer styles with a playful twist. Only at Target":
+                - /url: /b/solid-striped/-/N-q643le80bvd
+                - generic [ref=e444] [cursor=pointer]:
+                  - generic [ref=e445]:
+                    - heading "Meet Solid & Striped" [level=2] [ref=e446]:
+                      - generic [ref=e447]: Meet Solid & Striped
+                    - paragraph [ref=e448]:
+                      - generic [ref=e449]:
+                        - text: Classic summer styles with a playful twist. Only at
+                        - generic [ref=e450]: Target
+                        - text: ◎
+                  - paragraph
+            - generic [ref=e456]:
+              - link "Threshold™ pieces that elevate your home" [ref=e459] [cursor=pointer]:
+                - /url: /b/threshold/-/N-56dig?sortBy=newest
+                - generic [ref=e461]:
+                  - heading "Threshold™ pieces that elevate your home" [level=3] [ref=e462]:
+                    - generic [ref=e464]: Threshold™ pieces that elevate your home
+                  - paragraph
+              - generic [ref=e466]:
+                - generic [ref=e467]: New
+                - 'link "The all-new Oura Ring 5: 40% smaller, more powerful" [ref=e468] [cursor=pointer]':
+                  - /url: /b/oura/-/N-q643ler9uhu
+                  - generic [ref=e470]:
+                    - 'heading "The all-new Oura Ring 5: 40% smaller, more powerful" [level=3] [ref=e471]':
+                      - generic [ref=e473]: "The all-new Oura Ring 5: 40% smaller, more powerful"
+                    - paragraph
+              - generic [ref=e475]:
+                - generic [ref=e476]: New
+                - link "Shea McGee sitting on swivel ottoman in entry Stylish looks from Threshold™ with Studio McGee" [ref=e477] [cursor=pointer]:
+                  - /url: /b/threshold-designed-w-studio-mcgee/-/N-q643le65vqv
+                  - img "Shea McGee sitting on swivel ottoman in entry" [ref=e479]
+                  - generic [ref=e480]:
+                    - heading "Stylish looks from Threshold™ with Studio McGee" [level=3] [ref=e481]:
+                      - generic [ref=e483]: Stylish looks from Threshold™ with Studio McGee
+                    - paragraph
+              - generic [ref=e485]:
+                - generic [ref=e486]: New
+                - link "Good & Gather Collabs | Roy Choi A lineup of snacks in a mashup of flavors from award-winning chef Roy Choi. Only at Target for a limited time." [ref=e487] [cursor=pointer]:
+                  - /url: /c/good-gather-collabs-chef-roy-choi/-/N-q0ip7
+                  - img "Good & Gather Collabs | Roy Choi" [ref=e489]
+                  - generic [ref=e490]:
+                    - heading "A lineup of snacks in a mashup of flavors" [level=3] [ref=e491]:
+                      - generic [ref=e492]: A lineup of snacks in a mashup of flavors
+                    - paragraph [ref=e493]:
+                      - generic [ref=e494]:
+                        - text: from award-winning chef Roy Choi. Only at
+                        - generic [ref=e495]: Target
+                        - text: ◎ for a limited time.
+            - region "Carousel" [ref=e503]:
+              - generic [ref=e504]:
+                - heading "Red, white & ready for summer" [level=2] [ref=e505]
+                - link "Shop all" [ref=e506] [cursor=pointer]:
+                  - /url: /c/fourth-of-july/-/N-94xgg
+              - region "Carousel" [ref=e509]:
+                - list [ref=e510]:
+                  - listitem [ref=e511]:
+                    - generic [ref=e514]:
+                      - generic [ref=e515]:
+                        - link "Kids' Rainbow Casual Sandals - art class™ Gradient":
+                          - /url: /p/kids-rainbow-casual-sandals-art-class-gradient/-/A-95185694
+                          - img "Kids' Rainbow Casual Sandals - art class™ Gradient"
+                        - link "$15.00 Kids' Rainbow Casual Sandals - art class™ Gradient" [ref=e517] [cursor=pointer]:
+                          - /url: /p/kids-rainbow-casual-sandals-art-class-gradient/-/A-95185694
+                          - generic [ref=e519]: $15.00
+                          - generic [ref=e520]: Kids' Rainbow Casual Sandals - art class™ Gradient
+                      - button "Add to cart - Kids' Rainbow Casual Sandals - art class™ Gradient" [ref=e523] [cursor=pointer]: Add to cart
+                  - listitem [ref=e524]:
+                    - generic [ref=e527]:
+                      - generic [ref=e528]:
+                        - link "Women's Bandeau Extra High Leg Cheeky Coverage One Piece Swimsuit - Wild Fable™":
+                          - /url: /p/women-s-bandeau-extra-high-leg-cheeky-coverage-one-piece-swimsuit-wild-fable/-/A-95027189
+                          - img "Women's Bandeau Extra High Leg Cheeky Coverage One Piece Swimsuit - Wild Fable™"
+                        - link "$30.00 Women's Bandeau Extra High Leg Cheeky Coverage One Piece Swimsuit - Wild Fable™" [ref=e530] [cursor=pointer]:
+                          - /url: /p/women-s-bandeau-extra-high-leg-cheeky-coverage-one-piece-swimsuit-wild-fable/-/A-95027189
+                          - generic [ref=e532]: $30.00
+                          - generic [ref=e533]: Women's Bandeau Extra High Leg Cheeky Coverage One Piece Swimsuit - Wild Fable™
+                      - button "Add to cart - Women's Bandeau Extra High Leg Cheeky Coverage One Piece Swimsuit - Wild Fable™" [ref=e536] [cursor=pointer]: Add to cart
+                  - listitem [ref=e537]:
+                    - generic [ref=e540]:
+                      - generic [ref=e541]:
+                        - link "bubly Melted Ice Pop Sparkling Water - 8pk/12 fl oz Cans":
+                          - /url: /p/bubly-melted-ice-pop-sparkling-water-8pk-12-fl-oz-cans/-/A-91467264
+                          - img "bubly Melted Ice Pop Sparkling Water - 8pk/12 fl oz Cans"
+                        - link "$4.39($0.05/fluid ounce) bubly Melted Ice Pop Sparkling Water - 8pk/12 fl oz Cans" [ref=e543] [cursor=pointer]:
+                          - /url: /p/bubly-melted-ice-pop-sparkling-water-8pk-12-fl-oz-cans/-/A-91467264
+                          - generic [ref=e545]:
+                            - text: $4.39
+                            - generic [ref=e546]: ($0.05/fluid ounce)
+                          - generic [ref=e547]: bubly Melted Ice Pop Sparkling Water - 8pk/12 fl oz Cans
+                      - button "Add to cart - bubly Melted Ice Pop Sparkling Water - 8pk/12 fl oz Cans" [ref=e550] [cursor=pointer]: Add to cart
+                  - listitem [ref=e551]:
+                    - generic [ref=e554]:
+                      - generic [ref=e555]:
+                        - link "40\"x72\" Vertical Wide Cabana Striped Oversized Beach Towel Blue - Threshold™":
+                          - /url: /p/40-34-x72-34-vertical-wide-cabana-striped-oversized-beach-towel-blue-threshold-8482/-/A-94879114
+                          - img "40\"x72\" Vertical Wide Cabana Striped Oversized Beach Towel Blue - Threshold™"
+                        - link "$20.00 Save 30% on select home items 40\"x72\" Vertical Wide Cabana Striped Oversized Beach Towel Blue - Threshold™" [ref=e557] [cursor=pointer]:
+                          - /url: /p/40-34-x72-34-vertical-wide-cabana-striped-oversized-beach-towel-blue-threshold-8482/-/A-94879114
+                          - generic [ref=e558]:
+                            - generic [ref=e559]: $20.00
+                            - generic [ref=e561]:
+                              - img [ref=e562]
+                              - text: Save 30% on select home items
+                          - generic [ref=e564]: 40"x72" Vertical Wide Cabana Striped Oversized Beach Towel Blue - Threshold™
+                      - button "Add to cart - 40\"x72\" Vertical Wide Cabana Striped Oversized Beach Towel Blue - Threshold™" [ref=e567] [cursor=pointer]: Add to cart
+                  - listitem [ref=e568]:
+                    - generic [ref=e571]:
+                      - generic [ref=e572]:
+                        - 'link "Popsicle Lounge Float with Glitter Novelty Float - Sun Squad™ Red: Water Novelty Inflatable"':
+                          - /url: /p/popsicle-lounge-float-with-glitter-sun-squad-8482/-/A-80315279
+                          - 'img "Popsicle Lounge Float with Glitter Novelty Float - Sun Squad™ Red: Water Novelty Inflatable"'
+                        - button "Highly rated in Water Floats and Inflatables" [ref=e574] [cursor=pointer]:
+                          - generic [ref=e575]:
+                            - img [ref=e576]
+                            - text: Highly rated
+                        - 'link "$20.00 Popsicle Lounge Float with Glitter Novelty Float - Sun Squad™ Red: Water Novelty Inflatable" [ref=e579] [cursor=pointer]':
+                          - /url: /p/popsicle-lounge-float-with-glitter-sun-squad-8482/-/A-80315279
+                          - generic [ref=e581]: $20.00
+                          - generic [ref=e582]: "Popsicle Lounge Float with Glitter Novelty Float - Sun Squad™ Red: Water Novelty Inflatable"
+                      - 'button "Add to cart - Popsicle Lounge Float with Glitter Novelty Float - Sun Squad™ Red: Water Novelty Inflatable" [ref=e585] [cursor=pointer]': Add to cart
+                - button "Next Page" [ref=e586] [cursor=pointer]:
+                  - img
+            - generic [ref=e589]:
+              - generic [ref=e594]:
+                - link "Father’s Day gifts picked just for him":
+                  - /url: /c/gift-ideas-for-fathers/-/N-w5u18
+                  - heading "Father’s Day gifts picked just for him" [level=2] [ref=e597] [cursor=pointer]:
+                    - generic [ref=e599]: Father’s Day gifts picked just for him
+                - img "Collection of Father's Day items for Dads. Such as mugs, pens, Lindt chocolates and bose headphones." [ref=e600]
+              - region "Carousel" [ref=e607]:
+                - region "Carousel" [ref=e610]:
+                  - list [ref=e611]:
+                    - listitem [ref=e612]:
+                      - generic [ref=e615]:
+                        - generic [ref=e616]:
+                          - link "Pickle O'Joe Pickleball Paddle and Ball Set - Blue Wavy Striped":
+                            - /url: /p/pickle-o-39-joe-pickleball-paddle-and-ball-set-blue-wavy-striped/-/A-94975187
+                            - img "Pickle O'Joe Pickleball Paddle and Ball Set - Blue Wavy Striped"
+                          - link "$10.49 reg $14.99 Sale Pickle O'Joe Pickleball Paddle and Ball Set - Blue Wavy Striped" [ref=e618] [cursor=pointer]:
+                            - /url: /p/pickle-o-39-joe-pickleball-paddle-and-ball-set-blue-wavy-striped/-/A-94975187
+                            - generic [ref=e619]:
+                              - generic [ref=e620]: $10.49
+                              - generic [ref=e621]: reg $14.99 Sale
+                            - generic [ref=e622]: Pickle O'Joe Pickleball Paddle and Ball Set - Blue Wavy Striped
+                        - button "Add to cart - Pickle O'Joe Pickleball Paddle and Ball Set - Blue Wavy Striped" [ref=e625] [cursor=pointer]: Add to cart
+                    - listitem [ref=e626]:
+                      - generic [ref=e629]:
+                        - generic [ref=e630]:
+                          - link "Manscaped The Lawn Mower 3.0 Plus Essentials Shaving Kit, SkinSafe Electric Groin and Body Hair Trimmer, Men's Grooming Gift Set":
+                            - /url: /p/manscaped-lawn-mower-3-0-plus-essentials-shaving-kit-2ct/-/A-89523956
+                            - img "Manscaped The Lawn Mower 3.0 Plus Essentials Shaving Kit, SkinSafe Electric Groin and Body Hair Trimmer, Men's Grooming Gift Set"
+                          - button "Bestseller in Shaving Set" [ref=e632] [cursor=pointer]:
+                            - generic [ref=e633]:
+                              - img [ref=e634]
+                              - text: Bestseller
+                          - link "$69.99 Manscaped The Lawn Mower 3.0 Plus Essentials Shaving Kit, SkinSafe Electric Groin and Body Hair Trimmer, Men's Grooming Gift Set Sponsored" [ref=e637] [cursor=pointer]:
+                            - /url: /p/manscaped-lawn-mower-3-0-plus-essentials-shaving-kit-2ct/-/A-89523956
+                            - generic [ref=e639]: $69.99
+                            - generic [ref=e640]: Manscaped The Lawn Mower 3.0 Plus Essentials Shaving Kit, SkinSafe Electric Groin and Body Hair Trimmer, Men's Grooming Gift Set
+                            - paragraph [ref=e641]: Sponsored
+                        - button "Add to cart - Manscaped The Lawn Mower 3.0 Plus Essentials Shaving Kit, SkinSafe Electric Groin and Body Hair Trimmer, Men's Grooming Gift Set" [ref=e644] [cursor=pointer]: Add to cart
+                    - listitem [ref=e645]:
+                      - generic [ref=e648]:
+                        - generic [ref=e649]:
+                          - link "Men's Best Dad Ever Short Sleeve Graphic T-Shirt - Green":
+                            - /url: /p/men-s-best-dad-ever-short-sleeve-graphic-t-shirt-green/-/A-95051722
+                            - img "Men's Best Dad Ever Short Sleeve Graphic T-Shirt - Green"
+                          - link "$10.00 Men's Best Dad Ever Short Sleeve Graphic T-Shirt - Green" [ref=e651] [cursor=pointer]:
+                            - /url: /p/men-s-best-dad-ever-short-sleeve-graphic-t-shirt-green/-/A-95051722
+                            - generic [ref=e653]: $10.00
+                            - generic [ref=e654]: Men's Best Dad Ever Short Sleeve Graphic T-Shirt - Green
+                        - button "Add to cart - Men's Best Dad Ever Short Sleeve Graphic T-Shirt - Green" [ref=e657] [cursor=pointer]: Add to cart
+                    - listitem [ref=e658]:
+                      - generic [ref=e661]:
+                        - generic [ref=e662]:
+                          - link "Igloo 20 fl oz Hydration Sipper - White/Green":
+                            - /url: /p/igloo-20oz-hydration-sipper-white-green/-/A-94882417
+                            - img "Igloo 20 fl oz Hydration Sipper - White/Green"
+                          - link "$19.99 Igloo 20 fl oz Hydration Sipper - White/Green Sponsored" [ref=e664] [cursor=pointer]:
+                            - /url: /p/igloo-20oz-hydration-sipper-white-green/-/A-94882417
+                            - generic [ref=e666]: $19.99
+                            - generic [ref=e667]: Igloo 20 fl oz Hydration Sipper - White/Green
+                            - paragraph [ref=e668]: Sponsored
+                        - button "Add to cart - Igloo 20 fl oz Hydration Sipper - White/Green" [ref=e671] [cursor=pointer]: Add to cart
+                    - listitem [ref=e672]:
+                      - generic [ref=e675]:
+                        - generic [ref=e676]:
+                          - link "Apple AirPods Pro 3 Wireless Earbuds with Active Noise Cancellation":
+                            - /url: /p/ap2022-true-wireless-bluetooth-headphones/-/A-85978609
+                            - img "Apple AirPods Pro 3 Wireless Earbuds with Active Noise Cancellation"
+                          - button "Bestseller in Headphones" [ref=e678] [cursor=pointer]:
+                            - generic [ref=e679]:
+                              - img [ref=e680]
+                              - text: Bestseller
+                          - link "$199.99 reg $249.99 Sale Get the AirPods Pro 3 starting at $24/mo. Apple AirPods Pro 3 Wireless Earbuds with Active Noise Cancellation" [ref=e683] [cursor=pointer]:
+                            - /url: /p/ap2022-true-wireless-bluetooth-headphones/-/A-85978609
+                            - generic [ref=e684]:
+                              - generic [ref=e685]: $199.99
+                              - generic [ref=e686]: reg $249.99 Sale
+                              - generic [ref=e687]: Get the AirPods Pro 3 starting at $24/mo.
+                            - generic [ref=e688]: Apple AirPods Pro 3 Wireless Earbuds with Active Noise Cancellation
+                        - button "Add to cart - Apple AirPods Pro 3 Wireless Earbuds with Active Noise Cancellation" [ref=e691] [cursor=pointer]: Add to cart
+                  - button "Next Page" [ref=e692] [cursor=pointer]:
+                    - img
+            - heading "Moments worth celebrating" [level=2] [ref=e698]
+            - generic [ref=e703]:
+              - link "Celebrate Pride Discover our curated collection of clothing, decor & more." [ref=e706] [cursor=pointer]:
+                - /url: /c/pride/-/N-5589f
+                - generic [ref=e708]:
+                  - heading "Celebrate Pride" [level=3] [ref=e709]:
+                    - generic [ref=e711]: Celebrate Pride
+                  - paragraph [ref=e712]:
+                    - generic [ref=e714]: Discover our curated collection of clothing, decor & more.
+                  - paragraph
+              - link "USA balloon in red, silver and blue. Over a table with red, white and blue rice treats. Along with bomb pops popsicles and a rocket pop good & gather flavored water. Red, white & blue fun for everyone" [ref=e717] [cursor=pointer]:
+                - /url: /c/fourth-of-july/-/N-94xgg
+                - img "USA balloon in red, silver and blue. Over a table with red, white and blue rice treats. Along with bomb pops popsicles and a rocket pop good & gather flavored water." [ref=e719]
+                - generic [ref=e720]:
+                  - heading "Red, white & blue fun for everyone" [level=3] [ref=e721]:
+                    - generic [ref=e723]: Red, white & blue fun for everyone
+                  - paragraph
+            - region "Carousel" [ref=e731]:
+              - generic [ref=e732]:
+                - heading "Gear up for every match" [level=2] [ref=e733]
+                - link "Shop all" [ref=e734] [cursor=pointer]:
+                  - /url: /c/game-day-hosting/-/N-kfcf2
+              - region "Carousel" [ref=e737]:
+                - list [ref=e738]:
+                  - listitem [ref=e739]:
+                    - generic [ref=e742]:
+                      - generic [ref=e743]:
+                        - link "FIFA World Cup Philadelpia Poster T-Shirt - XL":
+                          - /url: /p/fifa-world-cup-philadelpia-poster-t-shirt-xl/-/A-94955243
+                          - img "FIFA World Cup Philadelpia Poster T-Shirt - XL"
+                        - link "$29.99 FIFA World Cup Philadelpia Poster T-Shirt - XL" [ref=e745] [cursor=pointer]:
+                          - /url: /p/fifa-world-cup-philadelpia-poster-t-shirt-xl/-/A-94955243
+                          - generic [ref=e747]: $29.99
+                          - generic [ref=e748]: FIFA World Cup Philadelpia Poster T-Shirt - XL
+                      - button "Add to cart - FIFA World Cup Philadelpia Poster T-Shirt - XL" [ref=e751] [cursor=pointer]: Add to cart
+                  - listitem [ref=e752]:
+                    - generic [ref=e755]:
+                      - generic [ref=e756]:
+                        - link "FIFA WORLD CUP 2026™ Ballers Series 1 by ZURU":
+                          - /url: /p/fifa-world-cup-2026-8482-ballers-series-1-by-zuru/-/A-94746744
+                          - img "FIFA WORLD CUP 2026™ Ballers Series 1 by ZURU"
+                        - button "Highly rated in Mini Figures" [ref=e758] [cursor=pointer]:
+                          - generic [ref=e759]:
+                            - img [ref=e760]
+                            - text: Highly rated
+                        - link "$9.99 FIFA WORLD CUP 2026™ Ballers Series 1 by ZURU Sponsored" [ref=e763] [cursor=pointer]:
+                          - /url: /p/fifa-world-cup-2026-8482-ballers-series-1-by-zuru/-/A-94746744
+                          - generic [ref=e765]: $9.99
+                          - generic [ref=e766]: FIFA WORLD CUP 2026™ Ballers Series 1 by ZURU
+                          - paragraph [ref=e767]: Sponsored
+                      - button "Add to cart - FIFA WORLD CUP 2026™ Ballers Series 1 by ZURU" [ref=e770] [cursor=pointer]: Add to cart
+                  - listitem [ref=e771]:
+                    - generic [ref=e774]:
+                      - generic [ref=e775]:
+                        - link "LEGO Editions Soccer Ball Kids Building Toy 43019":
+                          - /url: /p/lego-editions-soccer-ball-kids-building-toy-43019/-/A-94756829
+                          - img "LEGO Editions Soccer Ball Kids Building Toy 43019"
+                        - link "$129.99 LEGO Editions Soccer Ball Kids Building Toy 43019" [ref=e777] [cursor=pointer]:
+                          - /url: /p/lego-editions-soccer-ball-kids-building-toy-43019/-/A-94756829
+                          - generic [ref=e779]: $129.99
+                          - generic [ref=e780]: LEGO Editions Soccer Ball Kids Building Toy 43019
+                      - button "Add to cart - LEGO Editions Soccer Ball Kids Building Toy 43019" [ref=e783] [cursor=pointer]: Add to cart
+                  - listitem [ref=e784]:
+                    - generic [ref=e787]:
+                      - generic [ref=e788]:
+                        - link "Champion Women's Goalkeeper Short Sleeve Crochet Jersey - Blue Depths XXL":
+                          - /url: /p/champion-women-39-s-goalkeeper-short-sleeve-crochet-jersey-navy-blue-xxl/-/A-95019654
+                          - img "Champion Women's Goalkeeper Short Sleeve Crochet Jersey - Blue Depths XXL"
+                        - link "$35.00 Champion Women's Goalkeeper Short Sleeve Crochet Jersey - Blue Depths XXL Sponsored" [ref=e790] [cursor=pointer]:
+                          - /url: /p/champion-women-39-s-goalkeeper-short-sleeve-crochet-jersey-navy-blue-xxl/-/A-95019654
+                          - generic [ref=e792]: $35.00
+                          - generic [ref=e793]: Champion Women's Goalkeeper Short Sleeve Crochet Jersey - Blue Depths XXL
+                          - paragraph [ref=e794]: Sponsored
+                      - button "Add to cart - Champion Women's Goalkeeper Short Sleeve Crochet Jersey - Blue Depths XXL" [ref=e797] [cursor=pointer]: Add to cart
+                  - listitem [ref=e798]:
+                    - generic [ref=e801]:
+                      - generic [ref=e802]:
+                        - link "Lay's Wavy French Onion Soup Potato Chips - 7.5oz":
+                          - /url: /p/lay-39-s-wavy-french-onion-soup-potato-chips-7-5oz/-/A-95022417
+                          - img "Lay's Wavy French Onion Soup Potato Chips - 7.5oz"
+                        - link "$3.49 Buy 3 for $9 select Cheetos, Smartfood & Lay's chips Lay's Wavy French Onion Soup Potato Chips - 7.5oz" [ref=e804] [cursor=pointer]:
+                          - /url: /p/lay-39-s-wavy-french-onion-soup-potato-chips-7-5oz/-/A-95022417
+                          - generic [ref=e805]:
+                            - generic [ref=e806]: $3.49
+                            - generic [ref=e808]: Buy 3 for $9 select Cheetos, Smartfood & Lay's chips
+                          - generic [ref=e809]: Lay's Wavy French Onion Soup Potato Chips - 7.5oz
+                      - button "Add to cart - Lay's Wavy French Onion Soup Potato Chips - 7.5oz" [ref=e812] [cursor=pointer]: Add to cart
+                - button "Next Page" [ref=e813] [cursor=pointer]:
+                  - img
+            - generic [ref=e818]:
+              - generic [ref=e819]:
+                - heading "Featured categories" [level=2] [ref=e820]
+                - paragraph [ref=e821]:
+                  - link "Shop all" [ref=e822] [cursor=pointer]:
+                    - /url: /c/shop-all-categories/-/N-5xsxf?tag=ShopAll_CN
+              - list [ref=e823]:
+                - listitem [ref=e824]:
+                  - link "New Arrivals" [ref=e825] [cursor=pointer]:
+                    - /url: /c/what-s-new/-/N-o9rnh
+                    - generic [ref=e829]: New Arrivals
+                - listitem [ref=e830]:
+                  - link "Gift Ideas for Dad" [ref=e831] [cursor=pointer]:
+                    - /url: /c/gift-ideas-for-fathers/-/N-w5u18
+                    - generic [ref=e835]: Gift Ideas for Dad
+                - listitem [ref=e836]:
+                  - link "Women’s" [ref=e837] [cursor=pointer]:
+                    - /url: /c/women/-/N-5xtd3
+                    - generic [ref=e841]: Women’s
+                - listitem [ref=e842]:
+                  - link "Men’s" [ref=e843] [cursor=pointer]:
+                    - /url: /c/men/-/N-18y1l
+                    - generic [ref=e847]: Men’s
+                - listitem [ref=e848]:
+                  - link "Kids’" [ref=e849] [cursor=pointer]:
+                    - /url: /c/kids/-/N-xcoz4
+                    - generic [ref=e853]: Kids’
+                - listitem [ref=e854]:
+                  - link "Baby" [ref=e855] [cursor=pointer]:
+                    - /url: /c/baby/-/N-5xtly
+                    - generic [ref=e859]: Baby
+                - listitem [ref=e860]:
+                  - link "Home" [ref=e861] [cursor=pointer]:
+                    - /url: /c/home/-/N-5xtvd
+                    - generic [ref=e865]: Home
+                - listitem [ref=e866]:
+                  - link "Kitchen & Dining" [ref=e867] [cursor=pointer]:
+                    - /url: /c/kitchen-dining/-/N-hz89j
+                    - generic [ref=e871]: Kitchen & Dining
+                - listitem [ref=e872]:
+                  - link "Outdoor Living & Garden" [ref=e873] [cursor=pointer]:
+                    - /url: /c/outdoor-living-garden/-/N-5xtq9
+                    - generic [ref=e877]: Outdoor Living & Garden
+                - listitem [ref=e878]:
+                  - link "Household Essentials" [ref=e879] [cursor=pointer]:
+                    - /url: /c/household-essentials/-/N-5xsz1
+                    - generic [ref=e883]: Household Essentials
+                - listitem [ref=e884]:
+                  - link "Grocery" [ref=e885] [cursor=pointer]:
+                    - /url: /c/grocery/-/N-5xt1a
+                    - generic [ref=e889]: Grocery
+                - listitem [ref=e890]:
+                  - link "Health & Wellness" [ref=e891] [cursor=pointer]:
+                    - /url: /c/health-wellbeing/-/N-sw90d
+                    - generic [ref=e895]: Health & Wellness
+                - listitem [ref=e896]:
+                  - link "Beauty" [ref=e897] [cursor=pointer]:
+                    - /url: /c/beauty/-/N-55r1x
+                    - generic [ref=e901]: Beauty
+                - listitem [ref=e902]:
+                  - link "Toys" [ref=e903] [cursor=pointer]:
+                    - /url: /c/toys/-/N-5xtb0
+                    - generic [ref=e907]: Toys
+                - listitem [ref=e908]:
+                  - link "Electronics" [ref=e909] [cursor=pointer]:
+                    - /url: /c/electronics/-/N-5xtg6
+                    - generic [ref=e913]: Electronics
+                - listitem [ref=e914]:
+                  - link "Apple" [ref=e915] [cursor=pointer]:
+                    - /url: /b/apple/-/N-5y3ej
+                    - generic [ref=e919]: Apple
+                - listitem [ref=e920]:
+                  - link "Deals" [ref=e921] [cursor=pointer]:
+                    - /url: /c/top-deals/-/N-4xw74
+                    - generic [ref=e925]: Deals
+                - listitem [ref=e926]:
+                  - link "Clearance" [ref=e927] [cursor=pointer]:
+                    - /url: /c/clearance/-/N-5q0ga
+                    - generic [ref=e931]: Clearance
+            - generic [ref=e938]:
+              - 'link "Deals: now just a text away Sign up for texts to get deals, new arrivals & more—instantly."':
+                - /url: https://target.attn.tv/p/7Yb/landing-page
+                - generic [ref=e940] [cursor=pointer]:
+                  - 'heading "Deals: now just a text away" [level=2] [ref=e941]':
+                    - generic [ref=e942]: "Deals: now just a text away"
+                  - paragraph [ref=e943]:
+                    - generic [ref=e944]: Sign up for texts to get deals, new arrivals & more—instantly.
+            - generic [ref=e951]:
+              - iframe
+      - generic [ref=e953]:
+        - heading "Get top deals, latest trends, and more." [level=3] [ref=e954]
+        - generic [ref=e956]:
+          - generic [ref=e957]:
+            - textbox "Email address" [ref=e958]:
+              - /placeholder: " "
+            - generic: Email address
+          - generic [ref=e960]:
+            - alert [ref=e961]
+            - button "Sign up" [ref=e962] [cursor=pointer]
+        - link "privacy policy - opens in a new window" [ref=e963] [cursor=pointer]:
+          - /url: /c/target-privacy-policy/-/N-4sr7p
+          - text: Privacy policy
+          - img [ref=e965]
+      - contentinfo:
+        - heading "Footer" [level=2] [ref=e967]
+  - alert [ref=e968]

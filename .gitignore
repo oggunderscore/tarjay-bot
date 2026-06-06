@@ -1,0 +1,11 @@
+.env
+config.yaml
+products.yaml
+browser_data/
+logs/
+__pycache__/
+*.pyc
+.venv/
+venv/
+_test_*.py
+screenshots/

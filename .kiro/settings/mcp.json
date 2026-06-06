@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "nstbrowser-playwright": {
+      "command": "python",
+      "args": [
+        "nst_mcp_launcher.py"
+      ],
+      "disabled": false,
+      "autoApprove": [
+        "browser_navigate",
+        "browser_snapshot",
+        "browser_click"
+      ]
+    }
+  }
+}

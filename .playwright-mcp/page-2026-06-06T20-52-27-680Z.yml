@@ -1,0 +1,405 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic:
+      - link "skip to main content" [ref=e3] [cursor=pointer]:
+        - /url: "#content"
+      - link "skip to footer" [ref=e4] [cursor=pointer]:
+        - /url: "#footerHeader"
+    - generic [ref=e5]:
+      - generic [ref=e8]:
+        - 'button "Ship to location: 91709" [ref=e10] [cursor=pointer]':
+          - generic [ref=e11]:
+            - img [ref=e13]
+            - generic [ref=e15]: Ship to 91709
+        - 'button "Store: Tustin" [ref=e17] [cursor=pointer]':
+          - generic [ref=e18]:
+            - img [ref=e20]
+            - generic [ref=e23]: Tustin
+      - navigation "Primary" [ref=e25]:
+        - generic [ref=e27]:
+          - link "Target home" [ref=e28] [cursor=pointer]:
+            - /url: /
+            - img
+          - link "Main menu" [ref=e30] [cursor=pointer]:
+            - /url: /c/shop-all-categories/-/N-5xsxf?prehydrateClick=true
+            - img
+          - generic [ref=e32]:
+            - searchbox "What can we help you find? suggestions appear below" [ref=e33]
+            - button "search by voice" [ref=e35] [cursor=pointer]
+            - button "search" [ref=e36] [cursor=pointer]
+          - link "Hi, Kevin, 3 new Target Circle bonuses" [ref=e37] [cursor=pointer]:
+            - /url: /account?prehydrateClick=true
+            - generic [ref=e38]:
+              - generic [ref=e39]: "3"
+              - img [ref=e40]
+            - generic [ref=e42]: Hi, Kevin
+            - img
+          - link "cart 0 items" [ref=e43] [cursor=pointer]:
+            - /url: /cart?prehydrateClick=true
+            - img [ref=e45]
+      - main "Levi's® Men's 454™ Relaxed Fit 10\" Shorts - Black Denim 30" [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - navigation "Breadcrumbs" [ref=e56]:
+              - list [ref=e57]:
+                - listitem [ref=e58]:
+                  - link "Target" [ref=e59] [cursor=pointer]:
+                    - /url: /
+                - listitem [ref=e60]:
+                  - img [ref=e61]
+                  - link "Clothing, Shoes & Accessories" [ref=e63] [cursor=pointer]:
+                    - /url: /c/clothing-shoes-accessories/-/N-rdihz
+                - listitem [ref=e64]:
+                  - img [ref=e65]
+                  - link "Men’s Clothing" [ref=e67] [cursor=pointer]:
+                    - /url: /c/men/-/N-18y1l
+                - listitem [ref=e68]:
+                  - img [ref=e69]
+                  - link "Bottoms" [ref=e71] [cursor=pointer]:
+                    - /url: /c/pants-men-s-clothing/-/N-5xu29
+                - listitem [ref=e72]:
+                  - img [ref=e73]
+                  - link "Shorts" [ref=e75] [cursor=pointer]:
+                    - /url: /c/shorts-men-s-clothing/-/N-5xu27
+            - generic [ref=e76]:
+              - generic [ref=e79]:
+                - link "Skip images" [ref=e80] [cursor=pointer]:
+                  - /url: "#info-and-fulfillment"
+                - region "Image gallery" [ref=e81]:
+                  - generic [ref=e82]:
+                    - img "Levi's® Men's 454™ Relaxed Fit 10\" Shorts, 1 of 4" [ref=e87]
+                    - button "view full screen, Levi's® Men's 454™ Relaxed Fit 10\" Shorts, 1 of 4" [ref=e88] [cursor=pointer]:
+                      - img
+                    - button "favorite Levi's® Men's 454™ Relaxed Fit 10\" Shorts to keep tabs on it" [ref=e91] [cursor=pointer]:
+                      - img
+                  - generic [ref=e92]:
+                    - img "Levi's® Men's 454™ Relaxed Fit 10\" Shorts, 2 of 4" [ref=e97]
+                    - button "view full screen, Levi's® Men's 454™ Relaxed Fit 10\" Shorts, 2 of 4" [ref=e98] [cursor=pointer]:
+                      - img
+                  - generic [ref=e99]:
+                    - img "Levi's® Men's 454™ Relaxed Fit 10\" Shorts, 3 of 4" [ref=e104]
+                    - button "view full screen, Levi's® Men's 454™ Relaxed Fit 10\" Shorts, 3 of 4" [ref=e105] [cursor=pointer]:
+                      - img
+                  - generic [ref=e111]:
+                    - heading "Already have this product?" [level=2] [ref=e112]
+                    - heading "Snap a pic for all to see!" [level=2] [ref=e113]
+                    - button "click to upload your image" [ref=e115] [cursor=pointer]:
+                      - img
+                      - text: Upload photo
+              - generic [ref=e118]:
+                - list [ref=e121]:
+                  - listitem [ref=e122]:
+                    - link "Shop all Levi's" [ref=e123] [cursor=pointer]:
+                      - /url: /b/levi-s/-/N-54zpr
+                      - generic [ref=e124]: Shop all Levi's
+                - heading "Levi's® Men's 454™ Relaxed Fit 10\" Shorts - Black Denim 30" [level=1] [ref=e126]
+                - generic [ref=e130]:
+                  - link "4.45 out of 5 stars with 9 reviews" [ref=e131] [cursor=pointer]:
+                    - /url: "#"
+                    - generic [ref=e133]:
+                      - generic [ref=e134]: 4.45 out of 5 stars with 9 reviews
+                      - img [ref=e135]
+                      - img [ref=e140]
+                    - generic [ref=e156]: "9"
+                    - img [ref=e158]
+                  - link "5 Questions" [ref=e160] [cursor=pointer]:
+                    - /url: "#"
+                - generic [ref=e163]:
+                  - img [ref=e165]
+                  - generic [ref=e166]: Rarely returned
+                - generic [ref=e169]:
+                  - generic [ref=e172]: $44.99
+                  - button "More info about pricing" [ref=e174] [cursor=pointer]:
+                    - img
+                - generic [ref=e176]:
+                  - separator [ref=e177]
+                  - generic [ref=e178]:
+                    - generic [ref=e179]:
+                      - generic [ref=e180]: Color
+                      - text: Black Denim
+                    - list [ref=e183]:
+                      - listitem [ref=e184]:
+                        - button "Color, Black Denim, selected" [ref=e185] [cursor=pointer]:
+                          - img "Black Denim" [ref=e189]
+                      - listitem [ref=e190]:
+                        - button "Color, Blue Denim" [ref=e191] [cursor=pointer]:
+                          - img "Blue Denim" [ref=e195]
+                      - listitem [ref=e196]:
+                        - button "Color, Light Blue Denim" [ref=e197] [cursor=pointer]:
+                          - img "Light Blue Denim" [ref=e201]
+                      - listitem [ref=e202]:
+                        - button "Color, Medium Wash" [ref=e203] [cursor=pointer]:
+                          - img "Medium Wash" [ref=e207]
+                  - generic [ref=e208]:
+                    - generic [ref=e209]:
+                      - generic [ref=e210]: Size
+                      - text: "30"
+                      - button "Size guide" [ref=e212] [cursor=pointer]
+                    - list [ref=e215]:
+                      - listitem [ref=e216]:
+                        - button "Size, 30, selected" [ref=e217] [cursor=pointer]:
+                          - generic [ref=e218]: "30"
+                      - listitem [ref=e219]:
+                        - button "Size, 32" [ref=e220] [cursor=pointer]:
+                          - generic [ref=e221]: "32"
+                      - listitem [ref=e222]:
+                        - button "Size, 33" [ref=e223] [cursor=pointer]:
+                          - generic [ref=e224]: "33"
+                      - listitem [ref=e225]:
+                        - button "Size, 34" [ref=e226] [cursor=pointer]:
+                          - generic [ref=e227]: "34"
+                      - listitem [ref=e228]:
+                        - button "Size, 36" [ref=e229] [cursor=pointer]:
+                          - generic [ref=e230]: "36"
+                      - listitem [ref=e231]:
+                        - button "Size, 38" [ref=e232] [cursor=pointer]:
+                          - generic [ref=e233]: "38"
+                  - separator [ref=e234]
+                - region "Fulfillment" [ref=e239]:
+                  - generic [ref=e240]:
+                    - generic [ref=e241]:
+                      - button "pickup - unselected - 1 of 3 - Ready within 2 hours" [ref=e834] [cursor=pointer]:
+                        - img
+                        - generic [ref=e243]: Pickup
+                        - generic [ref=e244]: Ready within 2 hours
+                      - button "delivery - unselected - 2 of 3 - As soon as 3pm today" [ref=e245] [cursor=pointer]:
+                        - img
+                        - generic [ref=e246]: Delivery
+                        - generic [ref=e247]: As soon as 3pm today
+                      - button "shipping - selected - 3 of 3 - Arrives by Wed, Jun 10" [active] [ref=e835] [cursor=pointer]:
+                        - img
+                        - generic [ref=e249]: Shipping
+                        - generic [ref=e250]: Arrives by Wed, Jun 10
+                    - generic [ref=e836]:
+                      - generic [ref=e837]:
+                        - generic [ref=e838]: Ship to 91709
+                        - button "Edit ZIP code" [ref=e840] [cursor=pointer]
+                      - generic [ref=e841]:
+                        - generic [ref=e843]: Arrives by Wed, Jun 10
+                        - generic [ref=e845]:
+                          - text: Ships free with your
+                          - img "Target Circle 360" [ref=e846]
+                      - generic [ref=e849]:
+                        - button "Qty 1" [ref=e852] [cursor=pointer]:
+                          - generic [ref=e853]: Qty
+                          - generic [ref=e854]: "1"
+                          - img [ref=e856]
+                        - button "Add to cart for Levi's® Men's 454™ Relaxed Fit 10\" Shorts - Black Denim 30" [ref=e858] [cursor=pointer]: Add to cart
+                    - button "Buy now for Levi&#39;s&#174; Men&#39;s 454&#8482; Relaxed Fit 10&#34; Shorts - Black Denim 30" [ref=e859] [cursor=pointer]: Buy now
+                - generic [ref=e277]:
+                  - img "Free & easy returns" [ref=e284]
+                  - generic [ref=e285]:
+                    - heading "Free & easy returns" [level=3] [ref=e286]:
+                      - generic [ref=e288]: Free & easy returns
+                    - generic [ref=e290]: Return this item by mail or in store within 90 days for a full refund.
+                - generic [ref=e293]:
+                  - img [ref=e294]
+                  - generic [ref=e297]: Eligible for registries and wish lists
+                  - button "+ add item to registry and wish list" [ref=e298] [cursor=pointer]:
+                    - img
+                    - generic [ref=e299]: Add item
+                - button "Add to List" [ref=e861] [cursor=pointer]:
+                  - img
+                  - generic [ref=e862]: Add to list
+                - generic:
+                  - region "Deals"
+                - generic [ref=e300]:
+                  - link "Learn more about Target Circle™ Card" [ref=e302] [cursor=pointer]:
+                    - /url: /redcard?cpng=redcard9235
+                    - generic [ref=e303]:
+                      - img [ref=e305]
+                      - generic [ref=e307]:
+                        - heading "Save 5% every day" [level=2] [ref=e308]
+                        - text: With Target Circle™ Card
+                      - img [ref=e310]
+                  - button "Information about PayPal Pay in 4" [ref=e312] [cursor=pointer]:
+                    - generic [ref=e313]:
+                      - img [ref=e315]
+                      - generic [ref=e317]:
+                        - heading "Pay in 4" [level=2] [ref=e318]
+                        - text: Pay in 4 interest-free payments of $11.25
+                      - img [ref=e320]
+                  - button "Learn more about Affirm" [ref=e322] [cursor=pointer]:
+                    - generic [ref=e323]:
+                      - img [ref=e325]
+                      - generic [ref=e327]:
+                        - heading "Pay over time" [level=2] [ref=e328]
+                        - text: With Affirm on orders over $50
+                      - img [ref=e330]
+                - generic [ref=e334]:
+                  - heading "Fit & style" [level=2] [ref=e335]
+                  - list [ref=e336]:
+                    - listitem [ref=e866]:
+                      - generic [ref=e868]: 100% cotton
+                    - listitem [ref=e869]:
+                      - generic [ref=e871]: Relaxed fit
+                    - listitem [ref=e872]:
+                      - generic [ref=e874]: Low rise
+                    - listitem [ref=e875]:
+                      - generic [ref=e877]: Machine washable
+          - generic [ref=e353]:
+            - generic [ref=e355]:
+              - heading "About this item" [level=2] [ref=e356]
+              - generic [ref=e358]:
+                - button "Description" [ref=e360] [cursor=pointer]:
+                  - heading "Description" [level=3] [ref=e362]
+                  - img
+                - generic [ref=e363]:
+                  - button "Size Guide" [expanded] [ref=e364] [cursor=pointer]:
+                    - heading "Size Guide" [level=3] [ref=e366]
+                    - img
+                  - generic [ref=e369]:
+                    - iframe [ref=e879]:
+                      - generic [active] [ref=f524e1]:
+                        - banner
+                        - generic [ref=f524e3]:
+                          - generic [ref=f524e4]:
+                            - paragraph [ref=f524e5]: Levi's
+                            - text: Bottoms
+                          - generic [ref=f524e6]:
+                            - table [ref=f524e7]:
+                              - rowgroup [ref=f524e12]:
+                                - row "Size Waist Hips Thigh" [ref=f524e13]:
+                                  - columnheader "Size" [ref=f524e14]
+                                  - columnheader "Waist" [ref=f524e15]
+                                  - columnheader "Hips" [ref=f524e16]
+                                  - columnheader "Thigh" [ref=f524e17]
+                              - rowgroup [ref=f524e18]:
+                                - row "28 28.5-29 34.5-35 21.5-22" [ref=f524e19]:
+                                  - cell "28" [ref=f524e20]
+                                  - cell "28.5-29" [ref=f524e21]
+                                  - cell "34.5-35" [ref=f524e22]
+                                  - cell "21.5-22" [ref=f524e23]
+                                - row "29 29.5-30 35.5-36 22-22.5" [ref=f524e24]:
+                                  - cell "29" [ref=f524e25]
+                                  - cell "29.5-30" [ref=f524e26]
+                                  - cell "35.5-36" [ref=f524e27]
+                                  - cell "22-22.5" [ref=f524e28]
+                                - row "30 30.5-31 36.5-37 22.5-23" [ref=f524e29]:
+                                  - cell "30" [ref=f524e30]
+                                  - cell "30.5-31" [ref=f524e31]
+                                  - cell "36.5-37" [ref=f524e32]
+                                  - cell "22.5-23" [ref=f524e33]
+                                - row "31 31.5-32 37.5-38 23-23.5" [ref=f524e34]:
+                                  - cell "31" [ref=f524e35]
+                                  - cell "31.5-32" [ref=f524e36]
+                                  - cell "37.5-38" [ref=f524e37]
+                                  - cell "23-23.5" [ref=f524e38]
+                                - row "32 32.5-33 38.5-39 23.5-24" [ref=f524e39]:
+                                  - cell "32" [ref=f524e40]
+                                  - cell "32.5-33" [ref=f524e41]
+                                  - cell "38.5-39" [ref=f524e42]
+                                  - cell "23.5-24" [ref=f524e43]
+                                - row "33 33.5-34 39.5-40 24-24.5" [ref=f524e44]:
+                                  - cell "33" [ref=f524e45]
+                                  - cell "33.5-34" [ref=f524e46]
+                                  - cell "39.5-40" [ref=f524e47]
+                                  - cell "24-24.5" [ref=f524e48]
+                                - row "34 34.5-35 40.5-41 24-25" [ref=f524e49]:
+                                  - cell "34" [ref=f524e50]
+                                  - cell "34.5-35" [ref=f524e51]
+                                  - cell "40.5-41" [ref=f524e52]
+                                  - cell "24-25" [ref=f524e53]
+                                - row "35 35.5-36 41.5-42 25-26" [ref=f524e54]:
+                                  - cell "35" [ref=f524e55]
+                                  - cell "35.5-36" [ref=f524e56]
+                                  - cell "41.5-42" [ref=f524e57]
+                                  - cell "25-26" [ref=f524e58]
+                                - row "36 36.5-37.5 42.5-43.5 26-27" [ref=f524e59]:
+                                  - cell "36" [ref=f524e60]
+                                  - cell "36.5-37.5" [ref=f524e61]
+                                  - cell "42.5-43.5" [ref=f524e62]
+                                  - cell "26-27" [ref=f524e63]
+                                - row "38 38.5-39.5 44.5-45.5 27-28" [ref=f524e64]:
+                                  - cell "38" [ref=f524e65]
+                                  - cell "38.5-39.5" [ref=f524e66]
+                                  - cell "44.5-45.5" [ref=f524e67]
+                                  - cell "27-28" [ref=f524e68]
+                                - row "40 40.5-41.5 46.5-47.5 27.25-28.25" [ref=f524e69]:
+                                  - cell "40" [ref=f524e70]
+                                  - cell "40.5-41.5" [ref=f524e71]
+                                  - cell "46.5-47.5" [ref=f524e72]
+                                  - cell "27.25-28.25" [ref=f524e73]
+                                - row "42 42.5-43.5 48.5-49.5 28-29" [ref=f524e74]:
+                                  - cell "42" [ref=f524e75]
+                                  - cell "42.5-43.5" [ref=f524e76]
+                                  - cell "48.5-49.5" [ref=f524e77]
+                                  - cell "28-29" [ref=f524e78]
+                            - paragraph
+                          - generic [ref=f524e82]:
+                            - heading "men’s measuring guide" [level=3] [ref=f524e83]:
+                              - generic [ref=f524e84]: men’s
+                              - text: measuring guide
+                            - paragraph [ref=f524e85]: Use the tips & visuals in this guide to take body measurements accurately & easily.
+                            - paragraph [ref=f524e86]: Dont have a fabric tape measure? Use a shoelace or pant leg to measure. Then, lay it flat & use a ruler or tape measure to get a numerical measurement.
+                            - heading "How to measure" [level=3] [ref=f524e87]
+                            - list [ref=f524e88]:
+                              - listitem [ref=f524e89]:
+                                - heading "Waist" [level=4] [ref=f524e90]
+                                - paragraph [ref=f524e91]: Bend slightly to one side. The crease is where your natural waistline is. Measure a comfortable loose, level line around that point.
+                              - listitem [ref=f524e92]:
+                                - heading "Inseam" [level=4] [ref=f524e93]
+                                - paragraph [ref=f524e94]: Take a pair of pants that fit well. Now measure along the seam from the crotch to the leg opening.
+                    - button "Show more" [ref=e881] [cursor=pointer]
+                - button "Specifications" [ref=e372] [cursor=pointer]:
+                  - heading "Specifications" [level=3] [ref=e374]
+                  - img
+                - button "Shipping & Returns" [ref=e376] [cursor=pointer]:
+                  - heading "Shipping & Returns" [level=3] [ref=e378]
+                  - img
+                - button "Q&A (5)" [ref=e380] [cursor=pointer]:
+                  - heading "Q&A (5)" [level=3] [ref=e382]
+                  - img
+            - region "Additional product information and recommendations" [ref=e383]:
+              - heading "Additional product information and recommendations" [level=2] [ref=e384]
+              - button "Load all content at once" [ref=e385] [cursor=pointer]
+              - generic [ref=e386]:
+                - generic [ref=e388]:
+                  - iframe [ref=e885]:
+                    - link "Hearth & Hand WITH MAGNOLIA Have an effortless summer with a new collection designed in collaboration with Chip & Joanna Gaines." [ref=f521e5] [cursor=pointer]:
+                      - /url: https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjstlL6BPl7eVdn-1NTPmpl5ybZrb5ziF-PQffX3qkClZndOFqKoLn0t1WgAlScV_5b8zFefqWOE6tawXD4tp3W40uPckB2JsxAPWk9c3vMYJdASIolPhHMfajutHr3edI5moNu9hKnRZuEyXD63XhTwmf5eZStxejAqVqbBbQAxPi8sbRdoyBCiG4zDk9KgGFG3myDu00QVBiF9Xzy46hAroVmIDwMZ4OeWfiMXqrFTqlVLKluI5NSfgmBuyafF11ltsDIMreQFM9DD0P58bvcX_q19S8uZX-cRJ7vJrvP2GRgLcK6p3gnt8o18QReGhLjBM8EgakEZo0_MZ9bhhrtOeytkIIxOiNgnzaG8alzBbahAH-k4ayOQ1JcTqeuy29quz76_azhfgpkTk8QBQig&sai=AMfl-YRzFg2Y7cbKehWWqXaCjERa6aKHuVuoGFMhP5lGdAY190IqgYgqsKrBrEbAKGmnFBzTrDzcGVk5uvShwcghrqVLonr8wOPqo61Qtb_yY_gCRJSi3XffhIGXsBVMsUhx5n69NLAduKXWIQYiMX1kR9f49WQRLbo4pPY_UtCXtkH4PdaFKb5wMWNicOBfW2OgNmRkWP41c7J0bW4wbwu0XatqBi1LYmmO5YAkcM0nvPM_2biUuja-UUgneEwx6sa4Go74opZ1uJVRRX63WqK2_VA8hYN_EWOE4DotQZZTO1hvt6BksUT-4tkNB8rasR8M1w__k4o9cUj_JE9_hF513cIRUUv9CDlnzboSziVQLSNdL75BYmnl00pbf9Y51ZFy-1_lGspDltjvmxk&sig=Cg0ArKJSzN5Pm0KWv0wiEAE&fbs_aeid=%5Bgw_fbsaeid%5D&urlfix=1&adurl=https://www.target.com/c/hearth-hand-with-magnolia/-/N-4k98u%3Fafid%3DGAM_E%26fndsrc%3Dtmntga%26cpng%3D3932702354%26medID%3D7269252160%26cid%3D138553493455
+                      - img "Hearth & Hand WITH MAGNOLIA Have an effortless summer with a new collection designed in collaboration with Chip & Joanna Gaines." [ref=f521e7]
+                  - paragraph [ref=e886]: Sponsored
+                - heading "Discover more options" [level=3] [ref=e394]
+                - heading "Explore" [level=3] [ref=e448]
+                - heading "Shop the look" [level=3] [ref=e502]
+                - heading "Frequently bought together" [level=3] [ref=e556]
+                - heading "Guests also viewed" [level=3] [ref=e610]
+                - generic [ref=e661]:
+                  - heading "Related categories" [level=3] [ref=e662]
+                  - list [ref=e666]:
+                    - listitem [ref=e667]
+                    - listitem [ref=e669]
+                    - listitem [ref=e671]
+                    - listitem [ref=e673]
+                    - listitem [ref=e675]
+                    - listitem [ref=e677]
+                - heading "Your views" [level=3] [ref=e683]
+                - heading "Featured products" [level=3] [ref=e737]
+                - heading "Guest ratings & reviews" [level=3] [ref=e789]
+                - heading "Disclaimer" [level=3] [ref=e810]
+                - generic [ref=e814]:
+                  - iframe [ref=e890]:
+                    - generic [ref=f522e4]:
+                      - link "Get same-day delivery with Target Circle 360 Trademark. Plus free shipping, monthly freebies and more. See all the perks of membership." [ref=f522e5] [cursor=pointer]:
+                        - /url: https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsv4E762dRjAMKCbm3pTJZeaHl8TIXVvs4jDHH1q113X70aqwAXUHaitkTLmLPKNp5TVsecn4CrTOgp0DYtPXHNlSb7mBNfI9DZ_Mt4GEV8ntqrLxOl3d_xWw_r4u5pBTt5qw72yAWYfnP-oKFINYD_XzZhy1BPQyaBDZL11C5EGyXicKsXSqGMjfzYidu0W2_DXy-jVCinZKu9bVCdd4-qfrr0rhATncS-eXheGPxPynl08gH9vcFgNHqqMwZREuhYaHY85pN4djtk3Rm0FAlEV0JEkttV8sVz48Bwf19SThW7T8HTCGpLb__oebqFGQkPGTKx93-gVpaKg9HKraUYlpIpcQMte6_J4N8XZnB_H8qceZII84rkW-gucJO2-cjACO7m1vb1bvuhzxryx5-2A1zUZ1TCxkPB7ijilzzJMEicnyU4&sai=AMfl-YTUhTvUheNKaOSsgp7UTCkn8quzz8s0H6ROzLuPCPKvrkFpu3_J6rmJ2fblaXjYwbay04psiUO-6vlpjl8GSq8cmZRdd9Whel07KUhP4zS5S-PeIxuxmM3KRFcQOlysAC19gFwcvvdj5sc6-wcIHf8XHlY85Uz2_MofhD8cVPCMTLVHp4PzAkbsWk3g3SvaSO8hxNVmO040Io5P48m92xEYnyGCTen56by9WPFrytN-19Jlmqat16TlO8WkkeYOPXz25nzYM6Xb38Gwr3Lat6L8pCzI-0b5OC_YgoS702GqgvP3z6B_2EfV0e8YyqD98IqlpB3fq2gP3SGbF2IV5XqmcM6nXNyUcjXE39w3hGy_cUtBM5uWdHtVvrqBwqogTwmG-DKbQltX_Fk&sig=Cg0ArKJSzOHkeKoZ1NwREAE&fbs_aeid=%5Bgw_fbsaeid%5D&urlfix=1&adurl=https://www.target.com/l/target-circle-360/-/N-2rguk?afid=GAM_E&fndsrc=tmntga&cpng=3932702354&medID=7234243595&cid=138546564408
+                        - img "Get same-day delivery with Target Circle 360 Trademark. Plus free shipping, monthly freebies and more. See all the perks of membership." [ref=f522e6]
+                      - generic [ref=f522e7]: sponsored
+                  - paragraph [ref=e891]: Sponsored
+      - generic [ref=e817]:
+        - heading "Get top deals, latest trends, and more." [level=3] [ref=e818]
+        - generic [ref=e820]:
+          - generic [ref=e821]:
+            - textbox "Email address" [ref=e822]:
+              - /placeholder: " "
+            - generic: Email address
+          - generic [ref=e824]:
+            - alert [ref=e825]
+            - button "Sign up" [ref=e826] [cursor=pointer]
+        - link "privacy policy - opens in a new window" [ref=e827] [cursor=pointer]:
+          - /url: /c/target-privacy-policy/-/N-4sr7p
+          - text: Privacy policy
+          - img [ref=e829]
+      - contentinfo:
+        - heading "Footer" [level=2] [ref=e831]
+  - alert [ref=e832]
