@@ -42,7 +42,7 @@ class ScrapeBot(commands.Bot):
         self._paused = False
 
     async def setup_hook(self) -> None:
-        """Load cogs and sync commands on startup."""
+        """Load cogs on startup."""
         from scrapebot.bot.cogs.products import ProductsCog
         from scrapebot.bot.cogs.monitoring import MonitoringCog
         from scrapebot.bot.cogs.config import ConfigCog
@@ -51,14 +51,15 @@ class ScrapeBot(commands.Bot):
         await self.add_cog(MonitoringCog(self))
         await self.add_cog(ConfigCog(self))
 
-        # Sync to the notification channel's guild for instant availability,
-        # then also sync globally (global takes up to 1 hour to propagate)
+    async def on_ready(self) -> None:
+        """Start the monitor loop once the bot is connected."""
+        assert self.user is not None
+        logger.info("Bot connected as %s (ID: %s)", self.user.name, self.user.id)
+
+        # Sync slash commands to the guild for instant availability
         channel = self.get_channel(self.notification_channel_id)
         if channel is None:
-            try:
-                channel = await self.fetch_channel(self.notification_channel_id)
-            except Exception:
-                channel = None
+            channel = await self.fetch_channel(self.notification_channel_id)
 
         if channel and hasattr(channel, "guild"):
             guild = channel.guild
@@ -68,11 +69,6 @@ class ScrapeBot(commands.Bot):
         else:
             await self.tree.sync()
             logger.info("Slash commands synced globally (may take up to 1 hour)")
-
-    async def on_ready(self) -> None:
-        """Start the monitor loop once the bot is connected."""
-        assert self.user is not None
-        logger.info("Bot connected as %s (ID: %s)", self.user.name, self.user.id)
 
         channel = self.get_channel(self.notification_channel_id)
         if channel is None:

@@ -61,6 +61,32 @@ class CheckoutFlow:
             self._logged_in = True
             return
 
+        await self._do_login(page)
+
+    async def _handle_reauth_if_needed(self, page: Page) -> bool:
+        """Check if we hit a re-authentication page and handle it.
+
+        Target sometimes asks to re-authenticate mid-flow (e.g., after Buy Now).
+        This shows "Sign in to your account" with auth method choices.
+        Returns True if re-auth was handled, False if not on a login page.
+        """
+        # Check if we're on a login/sign-in page
+        if "login" not in page.url.lower():
+            # Also check for sign-in content on the page itself (could be in a modal)
+            sign_in_text = page.locator('text=/Sign in to your account/i').first
+            password_method = page.locator(
+                'div:has-text("Enter your password"), button:has-text("Enter your password")'
+            ).first
+            if await sign_in_text.count() == 0 and await password_method.count() == 0:
+                return False
+
+        logger.info("Re-authentication required — handling login flow")
+        self.notifier.checkout_progress("Re-Auth", "Session expired — signing in again...")
+        await self._do_login(page)
+        return True
+
+    async def _do_login(self, page: Page) -> None:
+        """Perform the full login flow — handles both fresh login and re-auth."""
         email = self.settings.target_email
         password = self.settings.target_password
         if not email or not password:
@@ -69,99 +95,110 @@ class CheckoutFlow:
                 "or set TARGET_EMAIL and TARGET_PASSWORD in .env"
             )
 
-        self.notifier.checkout_progress("Login", "Signing in to Target account")
+        # Check if we're already on a sign-in page with auth method choices
+        # (re-auth flow — no email needed, just pick password method)
+        password_method = page.locator(
+            '#password, div[role="button"]:has-text("password"), '
+            'button:has-text("Enter your password")'
+        ).first
 
-        # Use the full login URL with proper auth parameters
-        login_url = (
-            "https://www.target.com/login?client_id=ecom-web-1.0.0"
-            "&ui_namespace=ui-default&back_button_action=browser"
-            "&keep_me_signed_in=true&kmsi_default=false"
-            "&actions=create_session_request_username&signin_amr=true"
-        )
-        await page.goto(login_url, wait_until="domcontentloaded")
-        await page.wait_for_load_state("networkidle", timeout=30000)
-        await page.wait_for_timeout(3000)
-        await self._dismiss_popups(page)
+        if await password_method.count() > 0 and await password_method.is_visible():
+            # We're on the re-auth page — click "Enter your password" directly
+            logger.info("On re-auth page — clicking 'Enter your password'")
+            await password_method.click()
+            await page.wait_for_timeout(2000)
+        else:
+            # Fresh login — need to enter email first
+            self.notifier.checkout_progress("Login", "Signing in to Target account")
 
-        # Target login uses dynamically rendered inputs — wait for any visible input
-        email_selectors = [
-            '#username',
-            'input#username',
-            'input[name="username"]',
-            'input[type="email"]',
-            'input[id*="user"]',
-            'input[autocomplete="username"]',
-        ]
-        email_input = None
-        for selector in email_selectors:
-            loc = page.locator(selector).first
-            try:
-                await loc.wait_for(state="visible", timeout=5000)
-                email_input = loc
-                logger.info("Found email input with selector: %s", selector)
-                break
-            except PlaywrightTimeout:
-                continue
-
-        if email_input is None:
-            # Last resort: find any visible text/email input on the page
-            fallback = page.locator('input[type="text"], input[type="email"]').first
-            try:
-                await fallback.wait_for(state="visible", timeout=10000)
-                email_input = fallback
-                logger.info("Found email input via fallback text/email selector")
-            except PlaywrightTimeout:
-                await self.browser.screenshot(page, "login-no-email-input")
-                raise RuntimeError(
-                    "Could not find email input on Target login page. "
-                    "Page may have changed or require CAPTCHA. Try `--login` for manual login."
+            # Navigate to login if not already there
+            if "login" not in page.url.lower():
+                login_url = (
+                    "https://www.target.com/login?client_id=ecom-web-1.0.0"
+                    "&ui_namespace=ui-default&back_button_action=browser"
+                    "&keep_me_signed_in=true&kmsi_default=false"
+                    "&actions=create_session_request_username&signin_amr=true"
                 )
+                await page.goto(login_url, wait_until="domcontentloaded")
+                await page.wait_for_load_state("networkidle", timeout=30000)
+                await page.wait_for_timeout(3000)
+                await self._dismiss_popups(page)
 
-        await email_input.fill(email)
-        await page.wait_for_timeout(500)
+            # Enter email
+            email_selectors = [
+                '#username',
+                'input#username',
+                'input[name="username"]',
+                'input[type="email"]',
+                'input[id*="user"]',
+                'input[autocomplete="username"]',
+            ]
+            email_input = None
+            for selector in email_selectors:
+                loc = page.locator(selector).first
+                try:
+                    await loc.wait_for(state="visible", timeout=5000)
+                    email_input = loc
+                    break
+                except PlaywrightTimeout:
+                    continue
 
-        # Target uses a multi-step login: email first, then click Continue for password
-        # Always try to submit the email step first
-        continue_selectors = [
-            'button[type="submit"]',
-            'button:has-text("Continue")',
-            'button:has-text("Next")',
-            'button[data-test="login-continue"]',
-        ]
-        for selector in continue_selectors:
-            btn = page.locator(selector).first
-            if await btn.count() > 0 and await btn.is_visible():
-                logger.info("Clicking continue/submit after email with selector: %s", selector)
-                await btn.click()
-                break
+            if email_input is None:
+                fallback = page.locator('input[type="text"], input[type="email"]').first
+                try:
+                    await fallback.wait_for(state="visible", timeout=10000)
+                    email_input = fallback
+                except PlaywrightTimeout:
+                    # Maybe we're actually on the auth method page after all
+                    password_method = page.locator(
+                        '#password, div[role="button"]:has-text("password"), '
+                        'button:has-text("Enter your password")'
+                    ).first
+                    if await password_method.count() > 0:
+                        await password_method.click()
+                        await page.wait_for_timeout(2000)
+                        email_input = None  # Skip email, go to password
+                    else:
+                        await self.browser.screenshot(page, "login-no-email-input")
+                        raise RuntimeError("Could not find email input on Target login page.")
 
-        await page.wait_for_timeout(3000)
-        await self._dismiss_popups(page)
+            if email_input is not None:
+                await email_input.fill(email)
+                await page.wait_for_timeout(500)
 
-        # Target's second step shows auth method choices (e.g., "Enter your password" button)
-        # We need to click the password method button first to reveal the actual input
-        password_method_selectors = [
-            '#password',  # This is a div[role="button"] for choosing password method
-            '[data-test="password-method"]',
-            'div[role="button"]:has-text("password")',
-            'button:has-text("Enter your password")',
-        ]
-        for selector in password_method_selectors:
-            loc = page.locator(selector).first
-            if await loc.count() > 0 and await loc.is_visible():
-                logger.info("Clicking password method selector: %s", selector)
-                await loc.click()
-                await page.wait_for_timeout(2000)
-                break
+                # Click continue/submit after email
+                continue_selectors = [
+                    'button[type="submit"]',
+                    'button:has-text("Continue")',
+                    'button:has-text("Next")',
+                ]
+                for selector in continue_selectors:
+                    btn = page.locator(selector).first
+                    if await btn.count() > 0 and await btn.is_visible():
+                        await btn.click()
+                        break
 
-        await self._dismiss_popups(page)
+                await page.wait_for_timeout(3000)
+                await self._dismiss_popups(page)
 
-        # Now look for the actual password input field
+                # Click "Enter your password" method button
+                password_method_selectors = [
+                    '#password',
+                    'div[role="button"]:has-text("password")',
+                    'button:has-text("Enter your password")',
+                ]
+                for selector in password_method_selectors:
+                    loc = page.locator(selector).first
+                    if await loc.count() > 0 and await loc.is_visible():
+                        await loc.click()
+                        await page.wait_for_timeout(2000)
+                        break
+
+        # Now enter the password
         password_selectors = [
             'input[type="password"]',
             'input[name="password"]',
             'input[autocomplete="current-password"]',
-            'input#password-input',
         ]
         password_input = None
         for selector in password_selectors:
@@ -169,17 +206,13 @@ class CheckoutFlow:
             try:
                 await loc.wait_for(state="visible", timeout=8000)
                 password_input = loc
-                logger.info("Found password input with selector: %s", selector)
                 break
             except PlaywrightTimeout:
                 continue
 
         if password_input is None:
             await self.browser.screenshot(page, "login-no-password-input")
-            raise RuntimeError(
-                "Could not find password input on Target login page. "
-                "Try `--login` for manual login."
-            )
+            raise RuntimeError("Could not find password input on Target login page.")
 
         await password_input.fill(password)
         await page.wait_for_timeout(500)
@@ -290,6 +323,39 @@ class CheckoutFlow:
             )
             await buy_now.click()
 
+            # Check if we got redirected to a sign-in page
+            await page.wait_for_timeout(3000)
+            reauthed = await self._handle_reauth_if_needed(page)
+            if reauthed:
+                # After re-auth, navigate back to the product page and retry Buy Now
+                await page.goto(product.url, wait_until="domcontentloaded")
+                await page.wait_for_timeout(2000)
+
+                # Select shipping tab again
+                shipping_tab = page.locator('[data-test="fulfillment-cell-shipping"]').first
+                if await shipping_tab.count() > 0:
+                    await shipping_tab.click()
+                    await page.wait_for_timeout(1500)
+
+                # Click Buy Now again
+                buy_now = page.locator('button:has-text("Buy now")').first
+                try:
+                    await buy_now.wait_for(state="visible", timeout=10000)
+                    await buy_now.click()
+                    self.notifier.checkout_progress(
+                        "Buy Now",
+                        f"Re-clicking **Buy now** after re-auth\n🔗 `{page.url}`",
+                        product.url,
+                    )
+                except PlaywrightTimeout:
+                    return CheckoutOutcome(
+                        result=CheckoutResult.FAILED,
+                        message="Buy Now button not found after re-auth",
+                    )
+
+                # Wait again for potential second re-auth (shouldn't happen but be safe)
+                await page.wait_for_timeout(3000)
+
             # Wait for the side panel / checkout to load (can take up to 15s)
             # Look for "Place your order" OR any checkout-related content
             place_order_btn = page.locator(
@@ -311,9 +377,13 @@ class CheckoutFlow:
                 except PlaywrightTimeout:
                     pass
 
+            # Adjust quantity in the checkout panel using + button
+            if quantity > 1:
+                await self._set_checkout_quantity(page, quantity)
+
             self.notifier.checkout_progress(
                 "Checkout Panel",
-                f"Buy now panel {'loaded ✅' if panel_loaded else 'timeout ⚠️'}\n🔗 `{page.url}`",
+                f"Buy now panel {'loaded ✅' if panel_loaded else 'timeout ⚠️'} (qty {quantity})\n🔗 `{page.url}`",
                 product.url,
             )
 
@@ -469,23 +539,107 @@ class CheckoutFlow:
         return None
 
     async def _set_quantity(self, page: Page, quantity: int) -> None:
+        """Set quantity on the product page using the Qty custom dropdown."""
         if quantity <= 1:
             return
 
-        qty_select = page.locator(
-            'select[data-test="quantitySelector"], select#quantity, select[name="quantity"]'
-        ).first
-        if await qty_select.count() > 0:
-            await qty_select.select_option(str(quantity))
+        # Target uses a custom button dropdown: click "Qty" button to open, then pick option
+        qty_btn = page.locator('button:has(span:has-text("Qty"))').first
+        if await qty_btn.count() == 0:
+            qty_btn = page.locator('button:has-text("Qty")').first
+
+        if await qty_btn.count() > 0:
+            await qty_btn.click()
+            await asyncio.sleep(1)
+
+            # The dropdown options appear as a listbox or list items
+            # Click the option matching the desired quantity
+            option = page.locator(f'[role="option"]:text-is("{quantity}")').first
+            if await option.count() == 0:
+                option = page.locator(f'li:text-is("{quantity}")').first
+            if await option.count() == 0:
+                option = page.locator(f'[data-value="{quantity}"]').first
+            if await option.count() == 0:
+                # Try any element that is exactly the number text
+                option = page.get_by_text(str(quantity), exact=True).first
+
+            if await option.count() > 0:
+                await option.click()
+                await asyncio.sleep(0.5)
+                logger.info("Set product page quantity to %d", quantity)
+                return
+            else:
+                # Close the dropdown if we couldn't find the option
+                await page.keyboard.press("Escape")
+                logger.warning("Opened Qty dropdown but could not find option %d", quantity)
+        else:
+            logger.warning("Could not find Qty button on product page")
+
+    async def _set_checkout_quantity(self, page: Page, quantity: int) -> None:
+        """Adjust quantity in the checkout side panel using the select dropdown."""
+        if quantity <= 1:
             return
 
-        plus_btn = page.locator(
-            'button[data-test="quantityIncrement"], button[aria-label="Increase quantity"]'
-        ).first
-        if await plus_btn.count() > 0:
-            for _ in range(quantity - 1):
+        # Target's Buy Now panel uses a <select> dropdown for quantity
+        qty_select_selectors = [
+            'select[aria-label*="quantity" i]',
+            'select[aria-label*="Quantity" i]',
+            'select[data-test*="quantity" i]',
+            'select[name*="quantity" i]',
+            'select',  # fallback: any select in the panel area
+        ]
+
+        qty_select = None
+        for selector in qty_select_selectors:
+            loc = page.locator(selector).first
+            try:
+                await loc.wait_for(state="visible", timeout=5000)
+                qty_select = loc
+                logger.info("Found quantity select with: %s", selector)
+                break
+            except PlaywrightTimeout:
+                continue
+
+        if qty_select is not None:
+            # Click the select to open it, then use selectOption (most React-compatible way)
+            try:
+                await qty_select.select_option(value=str(quantity))
+            except Exception:
+                # If value doesn't match, try by label
+                try:
+                    await qty_select.select_option(label=str(quantity))
+                except Exception:
+                    # Last resort: JS approach
+                    await qty_select.evaluate(
+                        "(el, val) => { el.value = val; el.dispatchEvent(new Event('change', {bubbles: true})); }",
+                        str(quantity),
+                    )
+            await page.wait_for_timeout(1500)
+            logger.info("Set checkout quantity to %d via select dropdown", quantity)
+            self.notifier.checkout_progress(
+                "Quantity",
+                f"Set quantity to **{quantity}** ✅",
+            )
+            return
+
+        # Fallback: try the + (Increment) button
+        plus_btn = page.locator('button[aria-label="Increment"]').first
+        try:
+            await plus_btn.wait_for(state="visible", timeout=5000)
+            for i in range(quantity - 1):
                 await plus_btn.click()
-                await asyncio.sleep(0.2)
+                await asyncio.sleep(1.0)
+            logger.info("Set checkout quantity to %d via + button", quantity)
+            self.notifier.checkout_progress(
+                "Quantity",
+                f"Set quantity to **{quantity}** ✅",
+            )
+        except PlaywrightTimeout:
+            logger.warning("Could not find quantity control in checkout panel")
+            self.notifier.checkout_progress(
+                "Quantity",
+                f"⚠️ Could not change quantity to {quantity}",
+            )
 
     async def _add_to_cart(self, page: Page) -> bool:
         # Always select Shipping tab first (use the data-test selector from Target's DOM)
