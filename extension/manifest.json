@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Tarjay Auto-Checkout",
+  "version": "1.0.0",
+  "description": "Monitor Discord channels for Target SKUs/TCINs and auto-checkout",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://discord.com/*",
+    "https://www.target.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://discord.com/channels/*"],
+      "js": ["content_discord.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.target.com/*"],
+      "js": ["content_target.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

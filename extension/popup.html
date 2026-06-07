@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tarjay Auto-Checkout</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎯 Tarjay</h1>
+      <span class="version">v1.0.0</span>
+    </header>
+
+    <!-- Profiles Section -->
+    <section id="profiles-section">
+      <h2>Profiles</h2>
+      <div id="profiles-list"></div>
+      <button id="add-profile-btn" class="btn btn-primary">+ Add Profile</button>
+    </section>
+
+    <!-- Checkout Behavior -->
+    <section id="behavior-section">
+      <h2>Checkout Behavior</h2>
+      <label class="checkbox-row">
+        <input type="checkbox" id="auto-checkout" checked>
+        <span>Checkout automatically</span>
+      </label>
+      <label class="checkbox-row">
+        <input type="checkbox" id="close-oos">
+        <span>Close Tab if Out of Stock (OOS)</span>
+      </label>
+      <label class="checkbox-row">
+        <input type="checkbox" id="force-shipping" checked>
+        <span>Force Shipping</span>
+      </label>
+      <label class="checkbox-row">
+        <input type="checkbox" id="auto-login" checked>
+        <span>Auto-login</span>
+      </label>
+    </section>
+
+    <!-- Monitored Channels -->
+    <section id="channels-section">
+      <h2>Monitored Channels</h2>
+      <div id="channels-list"></div>
+      <div class="add-channel-form">
+        <input type="text" id="channel-id-input" placeholder="Channel ID">
+        <input type="text" id="channel-name-input" placeholder="Nickname">
+        <button id="add-channel-btn" class="btn btn-primary">+ Add Channel</button>
+      </div>
+    </section>
+
+    <!-- Status -->
+    <section id="status-section">
+      <h2>Status</h2>
+      <div id="status-log"></div>
+    </section>
+  </div>
+
+  <!-- Add Profile Modal -->
+  <div id="profile-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Add Profile</h3>
+      <input type="text" id="profile-name" placeholder="Profile Name (e.g. Main Account)">
+      <input type="email" id="profile-email" placeholder="Target Email">
+      <input type="password" id="profile-password" placeholder="Target Password">
+      <div class="modal-buttons">
+        <button id="save-profile-btn" class="btn btn-primary">Save</button>
+        <button id="cancel-profile-btn" class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add SKUs Modal -->
+  <div id="skus-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Add SKUs/TCINs</h3>
+      <p class="hint">One SKU/TCIN per line</p>
+      <textarea id="skus-textarea" rows="8" placeholder="95298172&#10;95008995&#10;85978609"></textarea>
+      <div class="modal-buttons">
+        <button id="save-skus-btn" class="btn btn-primary">Add SKUs</button>
+        <button id="cancel-skus-btn" class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
